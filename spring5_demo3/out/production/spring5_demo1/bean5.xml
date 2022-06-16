@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+    <bean id="depty" class="com.atbinwu.spring5.autowire.Dept"></bean>
+    <!-- 自动装配 autowire
+        byName：根据属性名称注入，注入值bean的id值和类属性名称一样
+
+    -->
+    <bean id="emp" class="com.atbinwu.spring5.autowire.Emp" autowire="byName"></bean>
+</beans>

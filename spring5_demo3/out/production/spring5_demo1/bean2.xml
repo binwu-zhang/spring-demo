@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list id="bookList">
+        <value>a</value>
+        <value>b</value>
+        <value>c</value>
+    </util:list>
+
+    <!--引入公共bookList-->
+    <!-- scope
+        singleton（默认）：单实例，加载spring配置文件时就会创建单实例对象
+        prototype：多实例，调用getBean时创建多实例对象
+        request：
+        session：
+    -->
+    <bean id="book" class="com.atbinwu.spring5.collectiontype.Book" scope="prototype">
+        <property name="list" ref="bookList"></property>
+    </bean>
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--开启组件扫描-->
+    <!--
+        1.多个用逗号隔开
+        <context:component-scan base-package="com.atbinwu.spring5.service,com.atbinwu.spring5.dao"></context:component-scan>
+        2.扫描包的上层目录
+        <context:component-scan base-package="com.atbinwu"></context:component-scan>
+    -->
+
+    <!--<context:component-scan base-package="com.atbinwu"></context:component-scan>-->
+
+    <!--<context:component-scan base-package="com.atbinwu" use-default-filters="false">
+        &lt;!&ndash;只扫描注解为@Controller的类&ndash;&gt;
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>-->
+
+
+    <!--<context:component-scan base-package="com.atbinwu">
+        &lt;!&ndash;不扫描注解为@Controller的类&ndash;&gt;
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>-->
+
+
+
+</beans>
