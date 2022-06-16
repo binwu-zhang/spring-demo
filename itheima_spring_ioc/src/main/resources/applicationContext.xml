@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        scope: singleton：单例，默认值;prototype：多例
+        init-method:初始化方法
+        destroy-method:销毁方法
+    -->
+
+    <!--无参构造方法实例化-->
+    <!--<bean id="userDao" class="com.atbinwu.spring.impl.UserDaoImpl" init-method="init" destroy-method="destroy"/>-->
+
+    <!--工厂静态方法实例化-->
+    <!--<bean id="userDao" class="com.atbinwu.factory.StaticFactory" factory-method="getUserDao"/>-->
+
+    <!--工厂实例方法实例化-->
+    <!--<bean id="factory" class="com.atbinwu.factory.DynamicFactory"/>
+    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"/>-->
+
+    <!--依赖注入 set方法-->
+    <!--<bean id="userDao" class="com.atbinwu.spring.impl.UserDaoImpl"/>
+    <bean id="userService" class="com.atbinwu.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>-->
+
+    <!--依赖注入 set方法， p命名空间： xmlns:p="http://www.springframework.org/schema/p"-->
+    <!--<bean id="userDao" class="com.atbinwu.spring.impl.UserDaoImpl"/>
+    <bean id="userService" class="com.atbinwu.service.impl.UserServiceImpl" p:userDao-ref="userDao"/>-->
+
+    <!--依赖注入 构造方法方法-->
+    <!--<bean id="userDao" class="com.atbinwu.spring.impl.UserDaoImpl"/>
+    <bean id="userService" class="com.atbinwu.service.impl.UserServiceImpl">
+        <constructor-arg name="userDao" ref="userDao"/>
+    </bean>-->
+
+
+    <!--参数注入-->
+    <bean id="userDao" class="com.atbinwu.spring.impl.UserDaoImpl">
+        <property name="username" value="zhangsan"/>
+        <property name="age" value="18"/>
+    </bean>
+    <bean id="userService" class="com.atbinwu.service.impl.UserServiceImpl">
+        <constructor-arg name="userDao" ref="userDao"/>
+    </bean>
+</beans>
