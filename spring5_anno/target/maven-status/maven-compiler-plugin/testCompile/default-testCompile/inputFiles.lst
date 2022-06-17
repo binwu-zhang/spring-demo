@@ -1,0 +1,9 @@
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/dao/UserDao.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/config/SpringConfiguration.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/dao/impl/UserDaoImpl.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/config/DataSourceConfiguration.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/service/impl/UserServiceImpl.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/service/UserService.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/test/SpringJunitTest.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/test/DataSourceTest.java
+/Users/zhangbinwu/java/spring-demo/spring5_anno/src/test/java/com/atbinwu/web/UserController.java

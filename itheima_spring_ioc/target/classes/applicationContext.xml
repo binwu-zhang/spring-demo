@@ -37,9 +37,37 @@
     </bean>-->
 
 
+    <!--参数注入-->
     <bean id="userDao" class="com.atbinwu.spring.impl.UserDaoImpl">
         <property name="username" value="zhangsan"/>
         <property name="age" value="18"/>
+        <property name="userList">
+            <list>
+                <value>aa</value>
+                <value>bb</value>
+                <value>cc</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="u1" value-ref="user1"/>
+                <entry key="u2" value-ref="user2"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="p1">pp1</prop>
+                <prop key="p2">pp2</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="user1" class="com.atbinwu.domain.User">
+        <property name="name" value="tom"/>
+        <property name="addr" value="beijing"/>
+    </bean>
+    <bean id="user2" class="com.atbinwu.domain.User">
+        <property name="name" value="lucy"/>
+        <property name="addr" value="tianjing"/>
     </bean>
     <bean id="userService" class="com.atbinwu.service.impl.UserServiceImpl">
         <constructor-arg name="userDao" ref="userDao"/>
